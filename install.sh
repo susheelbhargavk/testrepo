@@ -5,11 +5,14 @@ awk -F/ '{print $(NF)}' repo-tmp >> repo-details.txt
 rm -rf repo-tmp
 mkdir ~/gitdir
 cd ~/gitdir
-sudo apt-get install git-core -y > /dev/null
+#sudo apt-get install git-core -y > /dev/null
 git clone $repo
 
 touch ~/playlist
-crontab -l | { cat; echo "*/5 * * * * sh ~/update.sh "; } | crontab -
-sudo apt-get install vlc -y > /dev/null
+#crontab -l | { cat; echo "*/5 * * * * sh ~/update.sh "; } | crontab -
+#sudo apt-get install vlc -y > /dev/null
 
+cd gitdir/Testrepo-1/
+
+vlc * -f
 
