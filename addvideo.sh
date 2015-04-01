@@ -1,3 +1,4 @@
+cd gitdir/Testrepo-1/
 echo "enter the name of the video with extension"
 read vid
 git add vid
